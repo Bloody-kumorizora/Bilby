@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Билби — полевой дневник</title>
+<link rel="icon" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.className='js'</script>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-in">
+    <div>
+      <p class="kicker">DreamWorks Animation · 2018 · 8 минут · без слов</p>
+      <h1>Билби</h1>
+      <p class="lead">Жарко, хищники, еды нет. А тут ещё крошечный птенец, который решил, что ты теперь его семья. Что бы ты сделал?</p>
+      <a class="btn" href="#game">В экспедицию</a>
+      <a class="link" href="#pass">Паспорт и билет →</a>
+    </div>
+    <figure class="polaroid">
+      <img src="images/poster.jpg" alt="Постер мультфильма «Билби»: голубой зверёк с большими ушами и белый пушистый птенец на красной земле">
+      <figcaption>вот они, герои</figcaption>
+    </figure>
+  </div>
+  <img class="dune d1" src="images/dune-back.svg" alt="">
+  <img class="dune d2" src="images/dune-front.svg" alt="">
+</header>
+<div class="edge"></div>
+
+<main>
+<section class="page rv" id="story">
+  <span class="tag">записи из дневника</span>
+  <h2>О чём фильм</h2>
+  <p>Ни одного слова: только мимика, звук и скорость. Пустынный зверёк билби спасает птенца альбатроса от хищников и случайно становится его защитником.</p>
+  <div class="entries">
+    <div class="entry"><b>День 1 · Пустыня</b>Австралийский Аутбэк. Каждый плод на вес золота, каждая тень — повод насторожиться.</div>
+    <div class="entry"><b>День 2 · Подопечный</b>Герой хотел просто жить спокойно. Но оставить малыша без защиты не получается.</div>
+    <div class="entry"><b>День 3 · Погоня</b>Хищники не сдаются. Смешно, быстро и неожиданно трогательно. Финал не спойлерим.</div>
+  </div>
+  <aside class="label">
+    <dl>
+      <dt>Режиссёры</dt><dd>Лирон Топаз, Пьер Перифель, Джей-Пи Санс</dd>
+      <dt>Откуда взялся</dt><dd>Из отменённого полнометражного фильма «Ларрикинс»: аниматоры не бросили героев и сделали короткий фильм</dd>
+      <dt>Премьера</dt><dd>Фестиваль в Анси, июнь 2018</dd>
+      <dt>Награды</dt><dd>Приз зрительских симпатий в Палм-Спрингсе, приз жюри SIGGRAPH</dd>
+    </dl>
+  </aside>
+</section>
+
+<section class="page rv" id="game">
+  <span class="tag">задание № 1</span>
+  <h2>Вахта в пустыне</h2>
+  <p>Собирай плоды из нор и прогоняй ящериц. Ящерица, которую ты не успел спугнуть, разбивает яйцо. Набери 8 очков — получишь штамп.</p>
+  <div class="board">
+    <div class="hud"><span>Время: <b id="gt">30</b></span><span>Очки: <b id="gs">0</b></span><span id="gh"></span></div>
+    <div class="holes" id="holes"></div>
+    <p class="msg" id="gm">Нажми «Старт»</p>
+    <button class="btn" id="gb">Старт</button>
+  </div>
+</section>
+
+<section class="page rv" id="quiz">
+  <span class="tag">задание № 2</span>
+  <h2>Анкета исследователя</h2>
+  <div class="board" id="qz"></div>
+</section>
+
+<section class="page rv" id="facts">
+  <span class="tag">задание № 3</span>
+  <h2>Заметки на полях</h2>
+  <p>Билби существуют на самом деле. Открой три записки — получишь штамп.</p>
+  <div class="scraps" id="fg"></div>
+</section>
+
+<section class="page rv" id="pass">
+  <span class="tag">финал</span>
+  <h2>Паспорт экспедиции</h2>
+  <p>Собери три штампа, а на входе получишь бонус. Потом выбери сеанс и забронируй место.</p>
+  <div class="stamps">
+    <div class="stamp" data-k="game"><span>ВАХТА<br>пройдена</span></div>
+    <div class="stamp" data-k="quiz"><span>АНКЕТА<br>заполнена</span></div>
+    <div class="stamp" data-k="facts"><span>ЗАМЕТКИ<br>прочитаны</span></div>
+  </div>
+  <div class="board">
+    <input id="nm" placeholder="Твоё имя" autocomplete="given-name" aria-label="Имя">
+    <select id="gr" aria-label="Класс"><option>1–4 класс</option><option>5–7 класс</option><option>8–11 класс</option></select>
+    <select id="se" aria-label="Сеанс"><option>Сб, 28 ноября · 12:00</option><option>Сб, 5 декабря · 14:00</option><option>Вс, 13 декабря · 12:00</option></select>
+    <button class="btn" id="tb">Получить билет</button>
+    <div id="tk"></div>
+  </div>
+</section>
+</main>
+<footer>Фан-страница о короткометражке «Билби». Фильм и постер принадлежат DreamWorks Animation.</footer>
+<a class="fab" href="#pass">Штампы: <span id="cnt">0</span>/3</a>
+<script src="js/main.js"></script>
+</body>
+</html>
